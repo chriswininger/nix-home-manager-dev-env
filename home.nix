@@ -4,16 +4,28 @@
     stateVersion = "24.05"; # do not change this https://nix-community.github.io/home-manager/
     username = "chris";
     homeDirectory = "/Users/chris";
-    packages = [
-	pkgs.git
-        pkgs.neovim
-        pkgs.tmux
+    packages = with pkgs; [
+	      git
+        neovim
+        tmux
+        (nerdfonts.override { fonts = [ "Hack" "FiraCode" "DroidSansMono" ]; })
+        nodejs_22         
+        jdk22 
     ];
 
     # Tell it to map everything in the `config` directory in this
     # repository to the `.config` in my home directory
     file.".config" = { source = ./config; recursive = true; };
+    file.".tmux.conf" = { source = ./.tmux.conf; };
+
+    # environment variables
+    sessionVariables = {
+      TERM="xterm-256color";
+    };
   };
+
+  # setup nerdfonts, needed for tree in neovim
+  fonts.fontconfig.enable = true;
 
   # This is to ensure programs are using ~/.config rather than
   # /Users/<username/Library/whatever
@@ -23,10 +35,8 @@
 
   # you could also use fish or bash, I'll stick with zsh because... mac
   programs.zsh.enable = true;
-
-  programs.neovim = {
-    viAlias = true;
-    vimAlias = true;
+  programs.zsh.shellAliases = {
+    vim = "nvim";
   };
 }
 
