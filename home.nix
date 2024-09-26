@@ -2,10 +2,10 @@
   # This is required information for home-manager to do its job
   home = {
     stateVersion = "24.05"; # do not change this https://nix-community.github.io/home-manager/
-    username = "chris";
+      username = "chris";
     homeDirectory = "/Users/chris";
     packages = with pkgs; [
-	      git
+      git
         neovim
         tmux
         (nerdfonts.override { fonts = [ "Hack" "FiraCode" "DroidSansMono" ]; })
