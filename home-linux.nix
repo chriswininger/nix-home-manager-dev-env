@@ -52,6 +52,9 @@
 
       [push]
         default = current
+
+      [core]
+        editor = "${pkgs.neovim}/bin/nvim"
     '';
   };
 
