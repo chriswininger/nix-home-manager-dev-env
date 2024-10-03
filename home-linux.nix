@@ -16,8 +16,9 @@
       nodejs_22         
       jdk22
       vlc
-      k3b # cd ripping software
-      brasero # disk burning
+      #k3b # cd ripping software, seems to only work as root right now, installing in /etc/nixos/configuration system wide
+      # GOING SYSTEM WIDE DIDNT FIX EITHER< THIS MAY BE HINTING AT THE FIX https://github.com/NixOS/nixpkgs/issues/19154#issuecomment-647045107
+      # brasero # disk burning -- seems to have permission issues trying flatpak version
       abcde # command line cd ripper, example: abcde -o flac
       libbluray
       libdvdcss
@@ -30,6 +31,7 @@
       cargo
       rustc
       gpodder # podcast app
+      spotify
       gcc
       # clang this had some kind of collision
       # cdrtools -- did not wan to build with this
