@@ -12,7 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"rust_analyzer",
-					"ts_ls", -- javascript
+					"tsserver", -- javascript
 				},
 			})
 		end,
@@ -23,7 +23,7 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({})
-			lspconfig.ts_ls.setup({})
+			lspconfig.tsserver.setup({})
 			lspconfig.rust_analyzer.setup({})
 		end,
 	},
