@@ -24,6 +24,14 @@
     then
       tmux clear-history
     fi
+
+ 
+    if (
+        [ "$TERM" = "xterm-256color" ] && [ -n "$TMUX" ]
+      )
+    then
+      tmux clear-history
+    fi
     '';
 }
 
