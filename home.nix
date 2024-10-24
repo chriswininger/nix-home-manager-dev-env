@@ -28,6 +28,26 @@ in {
     file.".config" = { source = ./config; recursive = true; };
     file.".tmux.conf" = { source = ./.tmux.conf; };
 
+    # setup git config
+    file.".gitconfig" = {
+      enable = true;
+      text = ''
+        [user]
+          name = Chris Wininger
+          email = chris.wininger@gmail.com
+        [pull]
+          rebase = false
+
+        [push]
+          default = current
+
+        [core]
+          editor = "${pkgs.neovim}/bin/nvim"
+      '';
+    };
+
+
+
     # environment variables
     sessionVariables = {
       TERM="xterm-256color";
