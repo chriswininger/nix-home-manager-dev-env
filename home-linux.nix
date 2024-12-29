@@ -7,6 +7,7 @@
     packages = with pkgs; [
       git
       wget
+      curl
       nextcloud-client
       qownnotes
       keepassxc
