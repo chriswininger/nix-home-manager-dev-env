@@ -34,6 +34,7 @@
       gpodder # podcast app
       spotify
       gcc
+      calibre
       # clang this had some kind of collision
       # cdrtools -- did not wan to build with this
     ];
