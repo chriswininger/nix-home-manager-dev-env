@@ -19,9 +19,12 @@
       keepassxc
       neovim
       tmux
-      (nerdfonts.override { fonts = [ "Hack" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+      nerd-fonts.hack
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
+      nerd-fonts.jetbrains-mono
       nodejs_22         
-      jdk22
+      jdk23
       vlc
       #k3b # cd ripping software, seems to only work as root right now, installing in /etc/nixos/configuration system wide
       # GOING SYSTEM WIDE DIDNT FIX EITHER< THIS MAY BE HINTING AT THE FIX https://github.com/NixOS/nixpkgs/issues/19154#issuecomment-647045107
@@ -41,6 +44,7 @@
       spotify
       gcc
       calibre
+      firefox
       # clang this had some kind of collision
       # cdrtools -- did not wan to build with this
     ];
