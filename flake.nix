@@ -19,8 +19,11 @@
     homeConfigurations = {
       "chris" = home-manager.lib.homeManagerConfiguration {
         # darwin is the macOS kernel and aarch64 means ARM, i.e. apple silicon
-        pkgs = nixpkgs.legacyPackages.x86_64-darwin;
-        modules = [ ./home.nix ];
+        #pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+        #modules = [ ./home.nix ]
+        # linux
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [ ./home-linux.nix ];
       };
     };
   };

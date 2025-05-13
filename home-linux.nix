@@ -1,4 +1,10 @@
 { pkgs, ... }: {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
 # This is required information for home-manager to do its job
   home = {
     stateVersion = "24.05"; # do not change this https://nix-community.github.io/home-manager/
