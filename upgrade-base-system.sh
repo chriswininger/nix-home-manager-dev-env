@@ -1,0 +1,2 @@
+sudo nix-channel --update
+
