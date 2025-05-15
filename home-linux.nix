@@ -56,6 +56,8 @@
       spotify
       gcc
       calibre
+      gimp
+      electricsheep
       # clang this had some kind of collision
       # cdrtools -- did not wan to build with this
     ];

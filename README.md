@@ -32,3 +32,7 @@ the box for cdrecorder in place of wodim :shrug:. After that I was able to burn 
 
 Will this all break next time I rebuild... probably :-(
 
+## for NixOS
+
+Install changes to this with nixos-rebuild switch, you might get different errors than if you do ./run-home-manager, they seem to use different versions of things
+
